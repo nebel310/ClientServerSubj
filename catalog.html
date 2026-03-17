@@ -12,21 +12,50 @@
     </ul>
     <hr>
     <h2>Каталог</h2>
-    <a href="item1.html">
-        <img src="images/item1_small.jpg" alt="Товар 1" width="150">
-        <br>Подробнее о товаре "Помидор"
-    </a>
-    <br><br>
-    <a href="item2.html">
-        <img src="images/item1_small.jpg" alt="Товар 2" width="150">
-        <br>Подробнее о товаре "Помидор"
-    </a>
-    <br><br>
-    <a href="item3.html">
-        <img src="images/item1_small.jpg" alt="Товар 3" width="150">
-        <br>Подробнее о товаре "Помидор"
-    </a>
+    <div class="filter">
+        <label for="category">Фильтр по категории:</label>
+        <select id="category">
+            <option value="all">Все</option>
+            <option value="vegetables">Овощи</option>
+            <option value="fruits">Фрукты</option>
+            <option value="berries">Ягоды</option>
+        </select>
+    </div>
+    <div class="products">
+        <div class="product" data-category="vegetables" data-price="150">
+            <a href="item1.html">
+                <img src="images/item1_small.jpg" alt="Товар 1" width="150">
+                <br>Помидор
+            </a>
+            <p class="price">Цена: 150 руб.</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-category="vegetables" data-price="200">
+            <a href="item2.html">
+                <img src="images/item1_small.jpg" alt="Товар 2" width="150">
+                <br>Огурец
+            </a>
+            <p class="price">Цена: 200 руб.</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+        <div class="product" data-category="fruits" data-price="180">
+            <a href="item3.html">
+                <img src="images/item1_small.jpg" alt="Товар 3" width="150">
+                <br>Яблоко
+            </a>
+            <p class="price">Цена: 180 руб.</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+    </div>
+    <div class="cart">
+        <h3>Корзина</h3>
+        <div class="cart-items"></div>
+        <div class="cart-total">Итого: 0 руб.</div>
+        <button class="checkout">Оплатить</button>
+        <button class="clear-cart">Очистить корзину</button>
+    </div>
     <hr>
     <p>&copy; Все права защищены</p>
+    <script src="script.js"></script>
 </body>
 </html>
