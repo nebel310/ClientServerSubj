@@ -20,7 +20,7 @@ ul.menu a {
     text-decoration: none;
 }
 
-ul.menu a:hover {
+ul.menu a{
     text-decoration: underline;
 }
 
