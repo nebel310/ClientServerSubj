@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const payBtn = document.getElementById('pay');
   const clearBtn = document.getElementById('clear');
 
-
-
+  const saveBasket = () => {
+    localStorage.setItem('cart', JSON.stringify(basket));
+  };
 
   const updateBasket = () => {
     list.innerHTML = '';
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sum += item.price;
     });
     total.textContent = `Итого: ${sum} руб.`;
+    saveBasket();
 
     document.querySelectorAll('.remove_btn').forEach(btn => {
       btn.addEventListener('click', e => {
@@ -69,4 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
     basket = [];
     updateBasket();
   });
+
+  
+  const savedCart = localStorage.getItem('cart');
+  if (savedCart) {
+    basket = JSON.parse(savedCart);
+    updateBasket();
+  }
 });
