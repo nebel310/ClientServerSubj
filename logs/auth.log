@@ -1,0 +1,5 @@
+2026-05-13 12:13:38 | ip=::1 | login=фф | action=FAIL_LOGIN
+2026-05-13 12:14:12 | ip=::1 | login=admin123 | action=FAIL_LOGIN
+2026-05-13 12:14:24 | ip=::1 | login=user123 | action=FAIL_LOGIN
+2026-05-13 12:15:14 | ip=::1 | login=admin | action=SUCCESS_LOGIN
+2026-05-13 12:15:22 | ip=::1 | login=admin | action=LOGOUT
