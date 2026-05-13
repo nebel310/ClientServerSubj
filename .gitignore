@@ -1,3 +1,6 @@
 *.pdf
 *.zip
 *.docx
+node_modules
+package-lock.json
+.vscode
